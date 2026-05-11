@@ -22,3 +22,4 @@ chromadb
 python-dotenv
 numpy==1.26.4
 pandas
+structlog
