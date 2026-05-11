@@ -117,11 +117,11 @@ function addMsg(role, text, cls=''){
   return a;
 }
 
-function addThinking(){
+function addThinking(text='Searching the SHL catalog…'){
   clearWelcome();
   const a = document.createElement('article');
   a.className = 'msg thinking';
-  a.innerHTML = `<div class="msg-who">⏳ Advisor</div><div class="dots"><span></span><span></span><span></span></div>`;
+  a.innerHTML = `<div class="msg-who">⏳ Advisor</div><div class="msg-body" style="font-size:12px;color:var(--txt3)">${esc(text)}</div><div class="dots" style="margin-top:6px"><span></span><span></span><span></span></div>`;
   el.messages.appendChild(a);
   el.messages.scrollTop = el.messages.scrollHeight;
   return a;
@@ -190,16 +190,28 @@ async function submit(prompt){
 
   state.messages.push({role:'user',content:prompt});
   addMsg('user',prompt);
-  const thinking = addThinking();
+
+  // Show a helpful message if it's the first turn (cold start)
+  const thinkingText = state.turns === 1
+    ? 'Loading SHL catalog… (first request may take up to 2 min on free server)'
+    : 'Searching the SHL catalog…';
+  const thinking = addThinking(thinkingText);
   updateTurns(); analyzeSignal(prompt);
   el.promptInput.value='';
 
   try{
+    // 150-second timeout — accounts for Render cold start + model download
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 150000);
+
     const res = await fetch('/chat',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({messages:state.messages})
+      body: JSON.stringify({messages:state.messages}),
+      signal: controller.signal
     });
+    clearTimeout(timeoutId);
+
     const data = await res.json();
     if(!res.ok) throw new Error(data.detail||`HTTP ${res.status}`);
 
@@ -218,8 +230,12 @@ async function submit(prompt){
   } catch(e){
     state.messages.pop(); state.turns--;
     thinking.remove();
-    addMsg('bot',`⚠️ ${e.message}. Please try again.`);
-    el.chatStatus.textContent='Error — please retry';
+    const isTimeout = e.name === 'AbortError';
+    const msg = isTimeout
+      ? '⏱️ The server is still waking up (cold start). Please click Send again — it should work now!'
+      : `⚠️ ${e.message}. Please try again.`;
+    addMsg('bot', msg);
+    el.chatStatus.textContent = isTimeout ? 'Cold start — retry now!' : 'Error — please retry';
   } finally{
     state.busy=false;
     el.sendBtn.disabled=false; el.sendLabel.textContent='Send';

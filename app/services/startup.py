@@ -149,6 +149,7 @@ def get_agent() -> RecommendationAgent:
 
 async def startup() -> None:
     """Application startup handler — non-fatal so /health always passes."""
+    import asyncio
     logger.info("=" * 60)
     logger.info("SHL Assessment Recommendation System — Starting Up")
     logger.info("=" * 60)
@@ -158,15 +159,16 @@ async def startup() -> None:
     logger.info(f"LLM Provider: {settings.llm_provider} / {settings.active_model}")
     logger.info(f"Vector Store: {settings.vector_store_type}")
 
-    # Initialize in background — do NOT block startup.
-    # /health returns OK immediately; agent loads on first /chat request.
-    try:
-        get_agent()
-        logger.info("✅ System initialized successfully")
-    except Exception as e:
-        # Log error but do NOT raise — /health must return 200 immediately
-        # Agent will retry lazily on first /chat call
-        logger.error(f"⚠️ Startup initialization deferred: {e}. Will retry on first request.")
+    # Pre-warm agent in background — /health returns immediately
+    async def _prewarm():
+        try:
+            await asyncio.get_event_loop().run_in_executor(None, get_agent)
+            logger.info("✅ System pre-warmed successfully")
+        except Exception as e:
+            logger.warning(f"⚠️ Pre-warm failed (will retry on first request): {e}")
+
+    asyncio.create_task(_prewarm())
+    logger.info("🚀 Server ready — pre-warming in background...")
 
 
 async def shutdown() -> None:
