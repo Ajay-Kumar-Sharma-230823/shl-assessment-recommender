@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  shl-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shl-assessment-api
+    ports:
+      - "8000:8000"
+    environment:
+      - LLM_PROVIDER=${LLM_PROVIDER:-groq}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - APP_ENV=production
+      - LOG_LEVEL=INFO
+      - VECTOR_STORE_TYPE=faiss
+    volumes:
+      - ./data:/app/data
+      - ./vectorstore:/app/vectorstore
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s

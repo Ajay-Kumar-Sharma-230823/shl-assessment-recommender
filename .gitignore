@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+
+# Data & Models
+# Keep catalog and vectorstore for deployment (needed at runtime)
+# vectorstore/*.npy is excluded (large, can rebuild)
+vectorstore/*.npy
+# Keep these:
+# vectorstore/index.faiss
+# vectorstore/assessments.json
+# data/shl_catalog.json
+
+# Environment
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Cache
+data/cache/
+__pycache__/
+
+# Build
+dist/
+build/
+*.egg-info/
