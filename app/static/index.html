@@ -1,332 +1,224 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SHL Assessment Advisor — AI-Powered Recruiter Workspace</title>
-    <meta name="description" content="AI-powered SHL assessment recommendation engine. Get catalog-grounded hiring assessment suggestions in seconds." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/static/styles.css?v=10" />
-  </head>
-  <body>
-    <!-- Animated background -->
-    <div class="bg-grid" aria-hidden="true"></div>
-    <div class="orb orb-1" aria-hidden="true"></div>
-    <div class="orb orb-2" aria-hidden="true"></div>
-    <div class="orb orb-3" aria-hidden="true"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SHL Assessment Advisor — AI-Powered Recruiter Workspace</title>
+  <meta name="description" content="AI-powered SHL assessment recommendation engine. Get catalog-grounded hiring assessment suggestions in seconds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <!-- Animated orbs -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
 
-    <div class="app-shell">
-      <!-- TOPBAR -->
-      <header class="topbar">
-        <div class="brand-lockup">
-          <div class="brand-mark" aria-hidden="true">
-            <span class="brand-letters">SHL</span>
-            <div class="brand-glow"></div>
+  <div class="app-shell">
+    <!-- ── TOPBAR ── -->
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark">
+          <span>SHL</span>
+        </div>
+        <div class="brand-text">
+          <p class="eyebrow">Assessment Intelligence</p>
+          <h1>AI Recruiter Workspace</h1>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="status-pill" id="healthStatus">
+          <span class="status-dot"></span>
+          <span class="status-label">Connecting…</span>
+        </div>
+        <a class="docs-btn" href="/docs" target="_blank" rel="noreferrer">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+          API Docs
+        </a>
+      </div>
+    </header>
+
+    <!-- ── WORKSPACE ── -->
+    <main class="workspace">
+
+      <!-- LEFT: Brief Builder -->
+      <aside class="panel brief-panel">
+        <div class="panel-hd">
+          <div class="panel-icon-wrap">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
           </div>
-          <div class="brand-text">
-            <p class="eyebrow">Assessment Intelligence</p>
-            <h1>AI Recruiter Workspace</h1>
+          <div>
+            <p class="panel-eyebrow">Brief Builder</p>
+            <h2 class="panel-title">Hiring Context</h2>
           </div>
         </div>
 
-        <nav class="topbar-center" aria-label="Quick navigation">
-          <button class="nav-pill active" data-view="workspace">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-            Workspace
-          </button>
-          <button class="nav-pill" data-view="examples">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-            Examples
-          </button>
-        </nav>
-
-        <div class="topbar-actions">
-          <div class="status-pill" id="healthStatus">
-            <span class="status-dot"></span>
-            <span class="status-label">Connecting…</span>
-          </div>
-          <a class="docs-btn" href="/docs" target="_blank" rel="noreferrer">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
-            API Docs
-          </a>
+        <div class="field-group">
+          <label class="field-label" for="roleInput">Job Role</label>
+          <input id="roleInput" class="field-input" value="Java Developer" placeholder="e.g. Software Engineer" autocomplete="off" />
         </div>
-      </header>
 
-      <!-- MAIN WORKSPACE -->
-      <main class="workspace" id="workspaceView">
+        <div class="field-group">
+          <label class="field-label" for="levelSelect">Seniority Level</label>
+          <select id="levelSelect" class="field-input">
+            <option>Graduate</option>
+            <option>Mid-level</option>
+            <option selected>Senior</option>
+            <option>Manager</option>
+            <option>Executive</option>
+          </select>
+        </div>
 
-        <!-- LEFT PANEL: Brief Builder -->
-        <aside class="panel brief-panel" aria-label="Hiring brief builder">
-          <div class="panel-header">
-            <div class="panel-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        <div class="field-group">
+          <label class="field-label" for="focusSelect">Assessment Focus</label>
+          <select id="focusSelect" class="field-input">
+            <option>Cognitive ability, coding, and personality</option>
+            <option>Sales judgment, motivation, and communication</option>
+            <option>Customer service, language, and situational judgment</option>
+            <option>Leadership, personality, and decision making</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <p class="field-label">Constraints</p>
+          <label class="toggle-row" for="remoteCheck">
+            <input id="remoteCheck" type="checkbox" checked />
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <span class="toggle-label">Remote Testing</span>
+          </label>
+          <label class="toggle-row" for="fastCheck">
+            <input id="fastCheck" type="checkbox" />
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <span class="toggle-label">Under 45 Minutes</span>
+          </label>
+        </div>
+
+        <button class="cta-btn" id="buildBriefBtn" type="button">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Find Assessments
+        </button>
+
+        <div class="quick-examples">
+          <p class="field-label" style="margin-top:0">Quick Examples</p>
+          <div class="chip-row">
+            <button class="chip-btn" type="button" data-sample="java">☕ Java Dev</button>
+            <button class="chip-btn" type="button" data-sample="sales">📈 Sales</button>
+            <button class="chip-btn" type="button" data-sample="support">🎧 Support</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CENTER: Chat -->
+      <section class="panel chat-panel">
+        <div class="chat-hd">
+          <div class="chat-hd-left">
+            <div class="advisor-avatar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              <span class="avatar-pulse"></span>
             </div>
             <div>
-              <p class="panel-eyebrow">Brief Builder</p>
-              <h2 class="panel-title">Hiring Context</h2>
+              <h2 class="chat-title">SHL Assessment Advisor</h2>
+              <p class="chat-sub" id="chatSub">Ready to recommend assessments</p>
             </div>
           </div>
-
-          <div class="field-group">
-            <label class="field-label" for="roleInput">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Job Role
-            </label>
-            <div class="input-wrap">
-              <input id="roleInput" class="field-input" value="Java Developer" placeholder="e.g. Software Engineer" autocomplete="off" />
-            </div>
-          </div>
-
-          <div class="field-row">
-            <div class="field-group">
-              <label class="field-label" for="levelSelect">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                Seniority
-              </label>
-              <select id="levelSelect" class="field-input">
-                <option>Graduate</option>
-                <option>Mid-level</option>
-                <option selected>Senior</option>
-                <option>Manager</option>
-                <option>Executive</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field-group">
-            <label class="field-label" for="focusSelect">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
-              Assessment Focus
-            </label>
-            <select id="focusSelect" class="field-input">
-              <option>Cognitive ability, coding, and personality</option>
-              <option>Sales judgment, motivation, and communication</option>
-              <option>Customer service, language, and situational judgment</option>
-              <option>Leadership, personality, and decision making</option>
-            </select>
-          </div>
-
-          <div class="constraints-block">
-            <p class="field-label">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Constraints
-            </p>
-            <label class="toggle-row" for="remoteCheck">
-              <input id="remoteCheck" type="checkbox" checked />
-              <span class="toggle-track"><span class="toggle-thumb"></span></span>
-              <span class="toggle-label">Remote Testing</span>
-            </label>
-            <label class="toggle-row" for="fastCheck">
-              <input id="fastCheck" type="checkbox" />
-              <span class="toggle-track"><span class="toggle-thumb"></span></span>
-              <span class="toggle-label">Under 45 Minutes</span>
-            </label>
-          </div>
-
-          <button class="cta-btn" id="buildBriefBtn" type="button">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            Find Assessments
-            <span class="btn-shine"></span>
-          </button>
-
-          <!-- Quick Examples -->
-          <div class="examples-strip">
-            <p class="strip-label">Quick Examples</p>
-            <div class="chip-row">
-              <button class="chip-btn" type="button" data-sample="java">Java Dev</button>
-              <button class="chip-btn" type="button" data-sample="sales">Sales</button>
-              <button class="chip-btn" type="button" data-sample="support">Support</button>
-            </div>
-          </div>
-        </aside>
-
-        <!-- CENTER: Chat Panel -->
-        <section class="panel chat-panel" aria-label="Assessment advisor chat">
-          <div class="chat-header">
-            <div class="chat-header-left">
-              <div class="advisor-avatar">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-                <span class="avatar-pulse"></span>
-              </div>
-              <div>
-                <h2 class="chat-title">SHL Assessment Advisor</h2>
-                <p class="chat-subtitle" id="chatSubtitle">Ready to recommend assessments</p>
-              </div>
-            </div>
-            <div class="chat-header-right">
-              <span class="turn-badge" id="turnBadge">0 turns</span>
-              <button class="icon-btn" id="resetBtn" type="button" title="Reset conversation">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="message-stream" id="messageStream" aria-live="polite">
-            <div class="welcome-card">
-              <div class="welcome-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-              </div>
-              <h3>Hello! I'm your SHL Assessment Advisor</h3>
-              <p>Describe the role, seniority level, assessment focus, and any constraints. I'll return catalog-grounded SHL assessment recommendations tailored to your exact hiring needs.</p>
-              <div class="welcome-chips">
-                <span class="w-chip">🧠 Cognitive</span>
-                <span class="w-chip">💻 Technical</span>
-                <span class="w-chip">🤝 Personality</span>
-                <span class="w-chip">🎯 Situational</span>
-              </div>
-            </div>
-          </div>
-
-          <form class="composer" id="chatForm">
-            <div class="composer-inner">
-              <textarea
-                id="promptInput"
-                rows="3"
-                placeholder="e.g. Senior Java developer. Need cognitive ability, coding, and personality tests. Remote testing required. Under 45 minutes…"
-                required
-              ></textarea>
-              <div class="composer-footer">
-                <div class="composer-hints">
-                  <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line
-                </div>
-                <button class="send-btn" id="sendBtn" type="submit">
-                  <span class="send-label">Send</span>
-                  <svg class="send-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                </button>
-              </div>
-            </div>
-          </form>
-        </section>
-
-        <!-- RIGHT PANEL: Intelligence -->
-        <aside class="panel insight-panel" aria-label="Match intelligence">
-          <!-- Context Score -->
-          <div class="insight-section score-section">
-            <div class="panel-header compact">
-              <div class="panel-icon sm">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              </div>
-              <div>
-                <p class="panel-eyebrow">Live Signal</p>
-                <h2 class="panel-title sm">Context Score</h2>
-              </div>
-            </div>
-
-            <div class="score-ring-wrap">
-              <svg class="score-ring" viewBox="0 0 120 120">
-                <circle class="ring-bg" cx="60" cy="60" r="50" />
-                <circle class="ring-fill" id="scoreRingFill" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="314" />
-              </svg>
-              <div class="score-center">
-                <span class="score-number" id="contextScore">0%</span>
-                <span class="score-label">Match</span>
-              </div>
-            </div>
-
-            <div class="signal-pills">
-              <div class="signal-item">
-                <span class="signal-icon role-icon">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                </span>
-                <div class="signal-text">
-                  <span class="signal-key">Role</span>
-                  <span class="signal-val" id="roleSignal">—</span>
-                </div>
-              </div>
-              <div class="signal-item">
-                <span class="signal-icon focus-icon">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
-                </span>
-                <div class="signal-text">
-                  <span class="signal-key">Mix</span>
-                  <span class="signal-val" id="focusSignal">—</span>
-                </div>
-              </div>
-              <div class="signal-item">
-                <span class="signal-icon constraint-icon">
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </span>
-                <div class="signal-text">
-                  <span class="signal-key">Constraint</span>
-                  <span class="signal-val" id="constraintSignal">None</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Recommendations -->
-          <div class="insight-section recs-section">
-            <div class="panel-header compact">
-              <div class="panel-icon sm gold">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              </div>
-              <div>
-                <p class="panel-eyebrow">Results</p>
-                <h2 class="panel-title sm">Recommendations</h2>
-              </div>
-            </div>
-
-            <div class="empty-state" id="emptyResults">
-              <div class="empty-icon">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              </div>
-              <p class="empty-title">No results yet</p>
-              <p class="empty-sub">Run a brief to get AI-powered assessment recommendations.</p>
-            </div>
-            <div class="recommendation-list" id="recommendationList"></div>
-          </div>
-        </aside>
-      </main>
-
-      <!-- EXAMPLES VIEW -->
-      <section class="examples-view" id="examplesView" hidden>
-        <div class="examples-hero">
-          <h2>Try These Example Queries</h2>
-          <p>Click any example to load it into the workspace instantly</p>
-        </div>
-        <div class="examples-grid">
-          <div class="example-card" data-sample="java">
-            <div class="ex-badge tech">Technical</div>
-            <h3>Senior Java Developer</h3>
-            <p class="ex-desc">Full-stack Java developer for a fintech company. Need strong coding assessment, cognitive reasoning, and personality match.</p>
-            <div class="ex-tags">
-              <span>Coding</span><span>Cognitive</span><span>Personality</span><span>Remote</span>
-            </div>
-            <div class="ex-prompt-preview">"Senior Java developer. Need coding, cognitive ability, and personality assessments. Remote testing is required…"</div>
-            <button class="ex-launch-btn" type="button">
-              Launch Example →
-            </button>
-          </div>
-          <div class="example-card" data-sample="sales">
-            <div class="ex-badge sales">Sales</div>
-            <h3>Graduate Sales Hiring</h3>
-            <p class="ex-desc">National graduate sales intake program. Evaluate sales potential, motivation drivers, and communication skills at scale.</p>
-            <div class="ex-tags">
-              <span>Sales</span><span>Motivation</span><span>Communication</span><span>Remote</span>
-            </div>
-            <div class="ex-prompt-preview">"Graduate sales hiring program. Need sales potential, motivation, communication, and situational judgment assessments…"</div>
-            <button class="ex-launch-btn" type="button">
-              Launch Example →
-            </button>
-          </div>
-          <div class="example-card" data-sample="support">
-            <div class="ex-badge service">Service</div>
-            <h3>Customer Support Team</h3>
-            <p class="ex-desc">High-volume contact center hiring. Screen for service orientation, language proficiency, and situational judgment in under 45 mins.</p>
-            <div class="ex-tags">
-              <span>Service</span><span>Language</span><span>SJT</span><span>&lt;45 mins</span>
-            </div>
-            <div class="ex-prompt-preview">"Customer support representative. Need customer service judgment, language communication, and a short screening under 45 minutes…"</div>
-            <button class="ex-launch-btn" type="button">
-              Launch Example →
+          <div class="chat-hd-right">
+            <span class="turn-badge" id="turnBadge">0 / 8 turns</span>
+            <button class="icon-btn" id="resetBtn" type="button" title="Reset conversation">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
             </button>
           </div>
         </div>
+
+        <div class="message-stream" id="messageStream" aria-live="polite">
+          <div class="welcome-card">
+            <div class="welcome-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3>Hello! I'm your SHL Assessment Advisor</h3>
+            <p>Describe the role, seniority level, and assessment needs. I'll return catalog-grounded SHL recommendations tailored to your exact hiring requirements.</p>
+            <div class="welcome-chips">
+              <span class="w-chip">🧠 Cognitive</span>
+              <span class="w-chip">💻 Technical</span>
+              <span class="w-chip">🤝 Personality</span>
+              <span class="w-chip">🎯 Situational</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="composer" id="chatForm">
+          <textarea
+            id="promptInput"
+            rows="3"
+            placeholder="e.g. Senior Java developer. Need cognitive ability, coding, and personality tests. Remote testing required…"
+          ></textarea>
+          <div class="composer-footer">
+            <span class="composer-hint"><kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> new line</span>
+            <button class="send-btn" id="sendBtn" type="submit">
+              <span id="sendLabel">Send</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </form>
       </section>
-    </div>
 
-    <script src="/static/app.js?v=10" defer></script>
-  </body>
+      <!-- RIGHT: Intelligence Panel -->
+      <aside class="panel insight-panel">
+        <!-- Context Score -->
+        <div class="insight-section">
+          <div class="insight-hd">
+            <p class="panel-eyebrow">Live Signal</p>
+            <h2 class="panel-title">Context Score</h2>
+          </div>
+
+          <div class="score-ring-wrap">
+            <svg class="score-ring" viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="50" />
+              <circle class="ring-fill" id="scoreRingFill" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="314" />
+            </svg>
+            <div class="score-center">
+              <span class="score-number" id="contextScore">0%</span>
+              <span class="score-sub">Match</span>
+            </div>
+          </div>
+
+          <div class="signal-list">
+            <div class="signal-item">
+              <span class="signal-key">Role</span>
+              <span class="signal-val" id="roleSignal">—</span>
+            </div>
+            <div class="signal-item">
+              <span class="signal-key">Focus</span>
+              <span class="signal-val" id="focusSignal">—</span>
+            </div>
+            <div class="signal-item">
+              <span class="signal-key">Constraint</span>
+              <span class="signal-val" id="constraintSignal">None</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="insight-section recs-section">
+          <div class="insight-hd">
+            <p class="panel-eyebrow">Results</p>
+            <h2 class="panel-title">Recommendations</h2>
+          </div>
+
+          <div class="empty-state" id="emptyResults">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <p class="empty-title">No results yet</p>
+            <p class="empty-sub">Run a brief to get AI-powered assessment recommendations.</p>
+          </div>
+          <div class="recommendation-list" id="recommendationList"></div>
+        </div>
+      </aside>
+
+    </main>
+  </div>
+
+  <script src="/static/app.js" defer></script>
+</body>
 </html>
