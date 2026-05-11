@@ -9,13 +9,10 @@ venv/
 env/
 
 # Data & Models
-# Keep catalog and vectorstore for deployment (needed at runtime)
-# vectorstore/*.npy is excluded (large, can rebuild)
-vectorstore/*.npy
-# Keep these:
-# vectorstore/index.faiss
-# vectorstore/assessments.json
-# data/shl_catalog.json
+# Keep all vectorstore files for deployment (no rebuild needed on Render)
+# vectorstore/index.faiss  — committed
+# vectorstore/assessments.json  — committed
+# vectorstore/embeddings.npy  — committed
 
 # Environment
 .env

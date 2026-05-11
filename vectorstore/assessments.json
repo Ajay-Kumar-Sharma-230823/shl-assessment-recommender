@@ -1,32 +1,5 @@
 [
   {
-    "name": "Account Manager Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/account-manager-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "account",
-      "guidance",
-      "manager",
-      "speak",
-      "answers",
-      "solution",
-      "sheldon",
-      "support",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Account Manager Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat account guidance manager speak answers solution sheldon support online quick"
-  },
-  {
     "name": "Administrative Professional - Short Form",
     "url": "https://www.shl.com/products/product-catalog/view/administrative-professional-short-form/",
     "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
@@ -53,87 +26,6 @@
     "duration": null,
     "duration_minutes": null,
     "raw_text": "Administrative Professional - Short Form | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance quick form short speak administrative answers sheldon support online professional"
-  },
-  {
-    "name": "Agency Manager Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/agency-manager-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "agency",
-      "guidance",
-      "manager",
-      "speak",
-      "answers",
-      "solution",
-      "sheldon",
-      "support",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Agency Manager Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat agency guidance manager speak answers solution sheldon support online quick"
-  },
-  {
-    "name": "Apprentice + 8.0 Job Focused Assessment",
-    "url": "https://www.shl.com/products/product-catalog/view/apprentice-8-0-job-focused-assessment-4261/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "guidance",
-      "speak",
-      "assessment",
-      "answers",
-      "sheldon",
-      "support",
-      "apprentice",
-      "focused",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Apprentice + 8.0 Job Focused Assessment | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance speak assessment answers sheldon support apprentice focused online quick"
-  },
-  {
-    "name": "Apprentice 8.0 Job Focused Assessment",
-    "url": "https://www.shl.com/products/product-catalog/view/apprentice-8-0-job-focused-assessment/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "guidance",
-      "speak",
-      "assessment",
-      "answers",
-      "sheldon",
-      "support",
-      "apprentice",
-      "focused",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Apprentice 8.0 Job Focused Assessment | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance speak assessment answers sheldon support apprentice focused online quick"
   },
   {
     "name": "Bank Administrative Assistant - Short Form",
@@ -223,35 +115,6 @@
     "raw_text": "Bank Operations Supervisor - Short Form | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat operations guidance form short speak answers bank sheldon support supervisor online quick"
   },
   {
-    "name": "Bilingual Spanish Reservation Agent Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/bilingual-spanish-reservation-agent-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "bilingual",
-      "quick",
-      "guidance",
-      "agent",
-      "speak",
-      "answers",
-      "solution",
-      "sheldon",
-      "support",
-      "reservation",
-      "online",
-      "spanish"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Bilingual Spanish Reservation Agent Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat bilingual quick guidance agent speak answers solution sheldon support reservation online spanish"
-  },
-  {
     "name": "Bookkeeping, Accounting, Auditing Clerk Short Form",
     "url": "https://www.shl.com/products/product-catalog/view/bookkeeping-accounting-auditing-clerk-short-form/",
     "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
@@ -308,32 +171,6 @@
     "duration": null,
     "duration_minutes": null,
     "raw_text": "Branch Manager - Short Form | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance manager form short speak answers branch sheldon support online quick"
-  },
-  {
-    "name": "Cashier Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/cashier-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "guidance",
-      "speak",
-      "answers",
-      "solution",
-      "cashier",
-      "sheldon",
-      "support",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Cashier Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance speak answers solution cashier sheldon support online quick"
   },
   {
     "name": "Global Skills Development Report",
@@ -2152,34 +1989,6 @@
     "raw_text": "Customer Service Phone Simulation | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat customer guidance service speak phone answers sheldon support online quick simulation"
   },
   {
-    "name": "Customer Service Phone Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/customer-service-phone-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "customer",
-      "guidance",
-      "service",
-      "speak",
-      "phone",
-      "answers",
-      "solution",
-      "sheldon",
-      "support",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Customer Service Phone Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat customer guidance service speak phone answers solution sheldon support online quick"
-  },
-  {
     "name": "Cyber Risk (New)",
     "url": "https://www.shl.com/products/product-catalog/view/cyber-risk-new/",
     "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
@@ -2924,34 +2733,6 @@
     "raw_text": "Enterprise Leadership Report 2.0 | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance enterprise speak report answers leadership sheldon support online quick"
   },
   {
-    "name": "Entry Level Cashier Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/entry-level-cashier-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "entry",
-      "guidance",
-      "speak",
-      "answers",
-      "solution",
-      "cashier",
-      "sheldon",
-      "level",
-      "support",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Entry Level Cashier Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat entry guidance speak answers solution cashier sheldon level support online quick"
-  },
-  {
     "name": "Entry Level Customer Serv-Retail & Contact Center",
     "url": "https://www.shl.com/products/product-catalog/view/entry-level-customer-serv-retail-and-contact-center/",
     "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
@@ -2981,122 +2762,6 @@
     "duration": null,
     "duration_minutes": null,
     "raw_text": "Entry Level Customer Serv-Retail & Contact Center | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat customer entry center guidance contact speak serv answers sheldon level support retail online quick"
-  },
-  {
-    "name": "Entry Level Customer Service (General) Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/entry-level-customer-service-general-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "customer",
-      "entry",
-      "guidance",
-      "service",
-      "speak",
-      "general",
-      "answers",
-      "solution",
-      "sheldon",
-      "level",
-      "support",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Entry Level Customer Service (General) Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat customer entry guidance service speak general answers solution sheldon level support online quick"
-  },
-  {
-    "name": "Entry Level Hotel Front Desk Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/entry-level-hotel-front-desk-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "entry",
-      "front",
-      "guidance",
-      "speak",
-      "answers",
-      "solution",
-      "desk",
-      "hotel",
-      "sheldon",
-      "level",
-      "support",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Entry Level Hotel Front Desk Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat entry front guidance speak answers solution desk hotel sheldon level support online quick"
-  },
-  {
-    "name": "Entry Level Sales Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/entry-level-sales-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "entry",
-      "guidance",
-      "sales",
-      "speak",
-      "answers",
-      "solution",
-      "sheldon",
-      "support",
-      "level",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Entry Level Sales Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat entry guidance sales speak answers solution sheldon support level online quick"
-  },
-  {
-    "name": "Entry Level Technical Support Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/entry-level-technical-support-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "entry",
-      "technical",
-      "guidance",
-      "speak",
-      "answers",
-      "solution",
-      "sheldon",
-      "support",
-      "level",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Entry Level Technical Support Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat entry technical guidance speak answers solution sheldon support level online quick"
   },
   {
     "name": "ETL Testing (New)",
@@ -7793,34 +7458,6 @@
     "raw_text": "Sales & Service Phone Simulation | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance service sales phone speak answers sheldon support online quick simulation"
   },
   {
-    "name": "Sales & Service Phone Solution",
-    "url": "https://www.shl.com/products/product-catalog/view/sales-and-service-phone-solution/",
-    "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
-    "test_type": "Cognitive Ability",
-    "category": "Products",
-    "skills_measured": [],
-    "tags": [],
-    "keywords": [
-      "chat",
-      "guidance",
-      "service",
-      "sales",
-      "phone",
-      "speak",
-      "answers",
-      "solution",
-      "sheldon",
-      "support",
-      "online",
-      "quick"
-    ],
-    "remote_testing": false,
-    "adaptive": false,
-    "duration": null,
-    "duration_minutes": null,
-    "raw_text": "Sales & Service Phone Solution | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance service sales phone speak answers solution sheldon support online quick"
-  },
-  {
     "name": "Sales Interview Guide",
     "url": "https://www.shl.com/products/product-catalog/view/sales-interview-guide/",
     "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
@@ -8355,7 +7992,7 @@
     "raw_text": "SHL Verify Interactive - Inductive Reasoning | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance inductive speak answers reasoning interactive sheldon support verify online quick"
   },
   {
-    "name": "SHL Verify Interactive – Deductive Reasoning",
+    "name": "SHL Verify Interactive â€“ Deductive Reasoning",
     "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-deductive-reasoning/",
     "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
     "test_type": "Cognitive Ability",
@@ -8380,10 +8017,10 @@
     "adaptive": false,
     "duration": null,
     "duration_minutes": null,
-    "raw_text": "SHL Verify Interactive – Deductive Reasoning | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance speak answers reasoning interactive sheldon deductive support verify online quick"
+    "raw_text": "SHL Verify Interactive â€“ Deductive Reasoning | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance speak answers reasoning interactive sheldon deductive support verify online quick"
   },
   {
-    "name": "SHL Verify Interactive – Numerical Reasoning",
+    "name": "SHL Verify Interactive â€“ Numerical Reasoning",
     "url": "https://www.shl.com/products/product-catalog/view/shl-verify-interactive-numerical-reasoning/",
     "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
     "test_type": "Cognitive Ability",
@@ -8408,7 +8045,7 @@
     "adaptive": false,
     "duration": null,
     "duration_minutes": null,
-    "raw_text": "SHL Verify Interactive – Numerical Reasoning | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance speak answers reasoning interactive sheldon support verify online numerical quick"
+    "raw_text": "SHL Verify Interactive â€“ Numerical Reasoning | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance speak answers reasoning interactive sheldon support verify online numerical quick"
   },
   {
     "name": "SHL Verify Interactive G+",
@@ -10292,7 +9929,7 @@
     "raw_text": "360 Digital Report | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance speak report answers sheldon support digital online quick"
   },
   {
-    "name": "360° Multi-Rater Feedback System (MFS)",
+    "name": "360Â° Multi-Rater Feedback System (MFS)",
     "url": "https://www.shl.com/products/product-catalog/view/360-multi-rater-feedback-system-mfs/",
     "description": "Support chat Speak to Sheldon for quick answers and guidance. Online",
     "test_type": "Cognitive Ability",
@@ -10317,6 +9954,6 @@
     "adaptive": false,
     "duration": null,
     "duration_minutes": null,
-    "raw_text": "360° Multi-Rater Feedback System (MFS) | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance system speak rater answers sheldon feedback support multi online quick"
+    "raw_text": "360Â° Multi-Rater Feedback System (MFS) | Support chat Speak to Sheldon for quick answers and guidance. Online | Cognitive Ability | Products | chat guidance system speak rater answers sheldon feedback support multi online quick"
   }
 ]
