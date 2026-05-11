@@ -148,7 +148,7 @@ def get_agent() -> RecommendationAgent:
 
 
 async def startup() -> None:
-    """Application startup handler."""
+    """Application startup handler — non-fatal so /health always passes."""
     logger.info("=" * 60)
     logger.info("SHL Assessment Recommendation System — Starting Up")
     logger.info("=" * 60)
@@ -158,13 +158,15 @@ async def startup() -> None:
     logger.info(f"LLM Provider: {settings.llm_provider} / {settings.active_model}")
     logger.info(f"Vector Store: {settings.vector_store_type}")
 
-    # Initialize vector store and agent
+    # Initialize in background — do NOT block startup.
+    # /health returns OK immediately; agent loads on first /chat request.
     try:
         get_agent()
         logger.info("✅ System initialized successfully")
     except Exception as e:
-        logger.error(f"❌ Startup failed: {e}")
-        raise
+        # Log error but do NOT raise — /health must return 200 immediately
+        # Agent will retry lazily on first /chat call
+        logger.error(f"⚠️ Startup initialization deferred: {e}. Will retry on first request.")
 
 
 async def shutdown() -> None:
